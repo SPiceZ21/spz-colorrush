@@ -3,7 +3,7 @@ game 'gta5'
 
 name 'spz-colorrush'
 description 'SPiceZ Minigame — Color Rush. A huge multicoloured platform; a colour is called, everyone rushes to it, every other colour despawns. Grid shrinks each wave until one player is left. Free to play.'
-version '1.0.1'
+version '1.1.0'
 author 'SPiceZ-Core'
 lua54 'yes'
 
