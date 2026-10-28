@@ -79,27 +79,44 @@ Config.TileHeadroom     = 2
 -- tighter than they can survive, too large and colours get stripped out of play.
 Config.PlayerSpacing    = 6.0
 
--- ── Cars ──
--- This is a DRIVING game: every player is put into a random car from this list
--- at the start of each round, and the arena hangs in the sky so losing your
--- section means driving off the edge. Keep them small and nimble — a long car
--- struggles to turn around on a 13 m section.
--- Mixed bag: small cars stay the majority so most rounds feel fair, the big
--- stuff (fire truck, box trucks, semi cabs, buses) turns up for chaos. Every
--- model here is under ~10 m so it can still turn on one section.
-Config.Cars = {
-    -- compacts / sports
-    "blista", "futo", "prairie", "rhapsody", "dilettante",
-    "panto", "issi2", "brioso", "kuruma", "sultan",
-    -- emergency
-    "firetruk", "ambulance", "police3", "riot",
-    -- trucks / vans
-    "mule", "benson", "boxville2", "packer", "phantom", "hauler",
-    "flatbed", "towtruck", "tiptruck", "rubble", "mixer", "trash",
-    -- pickups / off-road
-    "bison", "sadler", "sandking", "rebel2", "dubsta3", "guardian",
-    -- odd ones
-    "taco", "camper", "journey", "tractor2", "caddy2",
+-- ── Cars ────────────────────────────────────────────────────────────────────
+-- Each ROUND one category is drawn at random and every player gets a random
+-- car from it, so the field is matched but different every round. Base-game
+-- models only. Drop a category or a car to take it out of the draw.
+Config.CarClasses = {
+    { name = "Super", cars = {
+        "adder", "zentorno", "t20", "osiris", "entityxf", "cheetah", "turismor", "reaper",
+        "fmj", "pfister811", "tempesta", "italigtb", "nero", "vagner", "xa21", "tyrus",
+        "sc1", "cyclone", "visione", "autarch", "krieger", "emerus", "thrax", "zorrusso", "furia" } },
+    { name = "Sports", cars = {
+        "comet2", "comet5", "comets2r", "carbonizzare", "elegy", "elegy2", "feltzer2",
+        "furoregt", "jester", "jester3", "jugular", "kuruma", "massacro", "neon",
+        "pariah", "penumbra2", "rapidgt", "schafter3", "schlagen", "schwarzer",
+        "specter", "sultan2", "vstr", "banshee", "buffalo2", "italigto",
+        "ninef", "omnis", "growler", "calico", "euros", "zr350", "remus" } },
+    { name = "Muscle", cars = {
+        "dominator", "dominator3", "gauntlet", "gauntlet4", "buccaneer2", "dukes", "sabregt2",
+        "vigero", "phoenix", "blade", "ruiner", "stalion", "ellie", "impaler", "yosemite",
+        "deviant", "vamos", "clique", "tulip", "hermes" } },
+    { name = "Sports Classics", cars = {
+        "ztype", "stinger", "monroe", "jb700", "cheetah2", "infernus2", "torero", "turismo2",
+        "gt500", "savestra", "viseris", "z190", "michelli", "fagaloa", "cheburek", "rapidgt3",
+        "retinue", "ardent", "mamba", "coquette2" } },
+    { name = "Coupes", cars = {
+        "cogcabrio", "exemplar", "f620", "felon", "jackal", "oracle2", "sentinel", "sentinel2",
+        "windsor", "zion", "previon", "kanjosj" } },
+    { name = "Sedans", cars = {
+        "asea", "fugitive", "glendale", "ingot", "intruder", "premier", "primo", "schafter2",
+        "stanier", "stratum", "sultan", "tailgater", "washington", "warrener", "cinquemila", "deity" } },
+    { name = "Compacts", cars = {
+        "blista", "brioso", "dilettante", "issi2", "panto", "prairie", "rhapsody", "asbo",
+        "kanjo", "club", "weevil", "brioso2" } },
+    { name = "SUVs", cars = {
+        "baller2", "cavalcade2", "dubsta", "granger", "gresley", "huntley", "landstalker2",
+        "mesa", "patriot", "rocoto", "seminole2", "toros", "xls", "rebla", "novak" } },
+    { name = "Off-road", cars = {
+        "sandking", "rebel2", "bifta", "brawler", "dubsta3", "kamacho", "mesa3", "riata",
+        "trophytruck", "caracara2", "everon", "winky", "hellion" } },
 }
 -- Cars take no damage in a round: elimination is decided purely by which section
 -- you are on, so a wrecked engine in the scrum should never decide it.
