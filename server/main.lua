@@ -191,7 +191,7 @@ local function endRound(r, why)
 
     pcall(function()
         local who = (#winners == 1) and winners[1].name or (#winners .. " winners")
-        exports["spz-log"]:Log("minigame", "Color Rush", ("%s — %s (%s)"):format(who, why, r.room.name), "success")
+        exports["spz-discord"]:Log("minigame", "Color Rush", ("%s — %s (%s)"):format(who, why, r.room.name), "success")
     end)
     log(("room %d match over: %s"):format(r.room.id, why))
 end
