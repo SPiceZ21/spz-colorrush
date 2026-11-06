@@ -38,5 +38,5 @@ dependencies {
   'oxmysql',
   'spz-core',
   'spz-identity',
-  'spz-progression',
+  'spz-races',        -- progression (credits)
 }
