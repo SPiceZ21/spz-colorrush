@@ -302,10 +302,10 @@ local function cleanup()
 end
 
 
--- Countdown / GO clips from spz-raceUI (ui/public/aud), game audio as fallback.
+-- Countdown / GO clips from the race HUD page (spz-races), game audio as fallback.
 local function playClip(name)
-    if GetResourceState("spz-raceUI") == "started" then
-        local ok = pcall(function() exports["spz-raceUI"]:PlaySound(name, 1.0) end)
+    if GetResourceState("spz-races") == "started" then
+        local ok = pcall(function() exports["spz-races"]:PlaySound(name, 1.0) end)
         if ok then return end
     end
     if name == "go" then
